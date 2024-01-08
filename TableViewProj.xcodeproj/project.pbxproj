@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE235EB52B4BECB500E4BD09 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235EB42B4BECB500E4BD09 /* TravelTableViewController.swift */; };
+		DE235EB72B4BECC000E4BD09 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235EB62B4BECC000E4BD09 /* TravelTableViewCell.swift */; };
+		DE235EB92B4BED5800E4BD09 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235EB82B4BED5800E4BD09 /* MagazineInfo.swift */; };
+		DE235EBC2B4BF0D100E4BD09 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DE235EBB2B4BF0D100E4BD09 /* Kingfisher */; };
 		DE4470722B4A551800334E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4470712B4A551800334E01 /* AppDelegate.swift */; };
 		DE4470742B4A551800334E01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4470732B4A551800334E01 /* SceneDelegate.swift */; };
 		DE4470762B4A551800334E01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4470752B4A551800334E01 /* ViewController.swift */; };
@@ -19,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE235EB42B4BECB500E4BD09 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
+		DE235EB62B4BECC000E4BD09 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		DE235EB82B4BED5800E4BD09 /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = "../../../Documents/새싹 강의자료/MagazineInfo.swift"; sourceTree = "<group>"; };
 		DE44706E2B4A551800334E01 /* TableViewProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4470712B4A551800334E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE4470732B4A551800334E01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE235EBC2B4BF0D100E4BD09 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +80,9 @@
 				DE4470852B4A5D6100334E01 /* Case2TableViewController.swift */,
 				DE4470872B4A667400334E01 /* TodoTableViewController.swift */,
 				DE4470892B4A6ED000334E01 /* TodoTableViewCell.swift */,
+				DE235EB42B4BECB500E4BD09 /* TravelTableViewController.swift */,
+				DE235EB62B4BECC000E4BD09 /* TravelTableViewCell.swift */,
+				DE235EB82B4BED5800E4BD09 /* MagazineInfo.swift */,
 			);
 			path = TableViewProj;
 			sourceTree = "<group>";
@@ -92,6 +103,9 @@
 			dependencies = (
 			);
 			name = TableViewProj;
+			packageProductDependencies = (
+				DE235EBB2B4BF0D100E4BD09 /* Kingfisher */,
+			);
 			productName = TableViewProj;
 			productReference = DE44706E2B4A551800334E01 /* TableViewProj.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +134,9 @@
 				Base,
 			);
 			mainGroup = DE4470652B4A551800334E01;
+			packageReferences = (
+				DE235EBA2B4BF0D100E4BD09 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = DE44706F2B4A551800334E01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,8 +168,11 @@
 				DE4470882B4A667400334E01 /* TodoTableViewController.swift in Sources */,
 				DE4470722B4A551800334E01 /* AppDelegate.swift in Sources */,
 				DE44708A2B4A6ED000334E01 /* TodoTableViewCell.swift in Sources */,
+				DE235EB52B4BECB500E4BD09 /* TravelTableViewController.swift in Sources */,
+				DE235EB72B4BECC000E4BD09 /* TravelTableViewCell.swift in Sources */,
 				DE4470862B4A5D6100334E01 /* Case2TableViewController.swift in Sources */,
 				DE4470742B4A551800334E01 /* SceneDelegate.swift in Sources */,
+				DE235EB92B4BED5800E4BD09 /* MagazineInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +332,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,6 +361,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE235EBA2B4BF0D100E4BD09 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE235EBB2B4BF0D100E4BD09 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE235EBA2B4BF0D100E4BD09 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE4470662B4A551800334E01 /* Project object */;
 }
