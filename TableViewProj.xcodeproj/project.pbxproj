@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		DE235EB52B4BECB500E4BD09 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235EB42B4BECB500E4BD09 /* TravelTableViewController.swift */; };
 		DE235EB72B4BECC000E4BD09 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235EB62B4BECC000E4BD09 /* TravelTableViewCell.swift */; };
-		DE235EB92B4BED5800E4BD09 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235EB82B4BED5800E4BD09 /* MagazineInfo.swift */; };
 		DE235EBC2B4BF0D100E4BD09 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DE235EBB2B4BF0D100E4BD09 /* Kingfisher */; };
+		DE235ED42B4D32F500E4BD09 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235ED32B4D32F500E4BD09 /* MagazineInfo.swift */; };
+		DE235ED72B4D332100E4BD09 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235ED62B4D332100E4BD09 /* CityInfo.swift */; };
+		DE235ED92B4D339100E4BD09 /* CityCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235ED82B4D339100E4BD09 /* CityCollectionViewController.swift */; };
+		DE235EDC2B4D339E00E4BD09 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235EDA2B4D339E00E4BD09 /* CityCollectionViewCell.swift */; };
+		DE235EDD2B4D339E00E4BD09 /* CityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE235EDB2B4D339E00E4BD09 /* CityCollectionViewCell.xib */; };
+		DE235EE12B4D399800E4BD09 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE235EE02B4D399800E4BD09 /* CityViewController.swift */; };
 		DE4470722B4A551800334E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4470712B4A551800334E01 /* AppDelegate.swift */; };
 		DE4470742B4A551800334E01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4470732B4A551800334E01 /* SceneDelegate.swift */; };
 		DE4470762B4A551800334E01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4470752B4A551800334E01 /* ViewController.swift */; };
@@ -25,7 +30,12 @@
 /* Begin PBXFileReference section */
 		DE235EB42B4BECB500E4BD09 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		DE235EB62B4BECC000E4BD09 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
-		DE235EB82B4BED5800E4BD09 /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = "../../../Documents/새싹 강의자료/MagazineInfo.swift"; sourceTree = "<group>"; };
+		DE235ED32B4D32F500E4BD09 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
+		DE235ED62B4D332100E4BD09 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityInfo.swift; path = "../../../../Documents/새싹 강의자료/CityInfo.swift"; sourceTree = "<group>"; };
+		DE235ED82B4D339100E4BD09 /* CityCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewController.swift; sourceTree = "<group>"; };
+		DE235EDA2B4D339E00E4BD09 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE235EDB2B4D339E00E4BD09 /* CityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCollectionViewCell.xib; sourceTree = "<group>"; };
+		DE235EE02B4D399800E4BD09 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		DE44706E2B4A551800334E01 /* TableViewProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4470712B4A551800334E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE4470732B4A551800334E01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +61,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE235ECE2B4D328A00E4BD09 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				DE4470892B4A6ED000334E01 /* TodoTableViewCell.swift */,
+				DE4470872B4A667400334E01 /* TodoTableViewController.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		DE235ECF2B4D329C00E4BD09 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				DE235EB42B4BECB500E4BD09 /* TravelTableViewController.swift */,
+				DE235EB62B4BECC000E4BD09 /* TravelTableViewCell.swift */,
+				DE235ED32B4D32F500E4BD09 /* MagazineInfo.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		DE235ED52B4D330F00E4BD09 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				DE235EDF2B4D398300E4BD09 /* ViewController */,
+				DE235EDE2B4D394400E4BD09 /* CollectionVC */,
+				DE235ED62B4D332100E4BD09 /* CityInfo.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		DE235EDE2B4D394400E4BD09 /* CollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				DE235ED82B4D339100E4BD09 /* CityCollectionViewController.swift */,
+				DE235EDA2B4D339E00E4BD09 /* CityCollectionViewCell.swift */,
+				DE235EDB2B4D339E00E4BD09 /* CityCollectionViewCell.xib */,
+			);
+			path = CollectionVC;
+			sourceTree = "<group>";
+		};
+		DE235EDF2B4D398300E4BD09 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DE235EE02B4D399800E4BD09 /* CityViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		DE4470652B4A551800334E01 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +127,9 @@
 		DE4470702B4A551800334E01 /* TableViewProj */ = {
 			isa = PBXGroup;
 			children = (
+				DE235ED52B4D330F00E4BD09 /* City */,
+				DE235ECF2B4D329C00E4BD09 /* Travel */,
+				DE235ECE2B4D328A00E4BD09 /* Todo */,
 				DE4470712B4A551800334E01 /* AppDelegate.swift */,
 				DE4470732B4A551800334E01 /* SceneDelegate.swift */,
 				DE4470752B4A551800334E01 /* ViewController.swift */,
@@ -78,11 +138,6 @@
 				DE44707C2B4A551900334E01 /* LaunchScreen.storyboard */,
 				DE44707F2B4A551900334E01 /* Info.plist */,
 				DE4470852B4A5D6100334E01 /* Case2TableViewController.swift */,
-				DE4470872B4A667400334E01 /* TodoTableViewController.swift */,
-				DE4470892B4A6ED000334E01 /* TodoTableViewCell.swift */,
-				DE235EB42B4BECB500E4BD09 /* TravelTableViewController.swift */,
-				DE235EB62B4BECC000E4BD09 /* TravelTableViewCell.swift */,
-				DE235EB82B4BED5800E4BD09 /* MagazineInfo.swift */,
 			);
 			path = TableViewProj;
 			sourceTree = "<group>";
@@ -154,6 +209,7 @@
 				DE44707E2B4A551900334E01 /* LaunchScreen.storyboard in Resources */,
 				DE44707B2B4A551900334E01 /* Assets.xcassets in Resources */,
 				DE4470792B4A551800334E01 /* Main.storyboard in Resources */,
+				DE235EDD2B4D339E00E4BD09 /* CityCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,14 +221,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4470762B4A551800334E01 /* ViewController.swift in Sources */,
+				DE235EE12B4D399800E4BD09 /* CityViewController.swift in Sources */,
 				DE4470882B4A667400334E01 /* TodoTableViewController.swift in Sources */,
+				DE235ED72B4D332100E4BD09 /* CityInfo.swift in Sources */,
 				DE4470722B4A551800334E01 /* AppDelegate.swift in Sources */,
 				DE44708A2B4A6ED000334E01 /* TodoTableViewCell.swift in Sources */,
 				DE235EB52B4BECB500E4BD09 /* TravelTableViewController.swift in Sources */,
+				DE235ED92B4D339100E4BD09 /* CityCollectionViewController.swift in Sources */,
+				DE235EDC2B4D339E00E4BD09 /* CityCollectionViewCell.swift in Sources */,
 				DE235EB72B4BECC000E4BD09 /* TravelTableViewCell.swift in Sources */,
 				DE4470862B4A5D6100334E01 /* Case2TableViewController.swift in Sources */,
 				DE4470742B4A551800334E01 /* SceneDelegate.swift in Sources */,
-				DE235EB92B4BED5800E4BD09 /* MagazineInfo.swift in Sources */,
+				DE235ED42B4D32F500E4BD09 /* MagazineInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

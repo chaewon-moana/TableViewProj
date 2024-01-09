@@ -29,6 +29,7 @@ class TodoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttribute()
+        tableView.separatorStyle = .none
     }
     
     func setAttribute() {
