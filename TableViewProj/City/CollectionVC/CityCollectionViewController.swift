@@ -44,25 +44,7 @@ class CityCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityCollectionViewCell", for: indexPath) as! CityCollectionViewCell
         
-        let data = city[indexPath.item]
-        let url = URL(string: data.city_image)
-                
-        cell.cityImageView.kf.setImage(with: url)
-        cell.cityImageView.contentMode = .scaleAspectFill
-        cell.cityImageView.layer.cornerRadius = cell.cityImageView.frame.height/2
-        cell.cityImageView.layer.borderWidth = 1
-        cell.cityImageView.layer.borderColor = UIColor.clear.cgColor
-        cell.cityImageView.clipsToBounds = true
-
-        cell.mainLabel.text = "\(data.city_name) | \(data.city_english_name)"
-        cell.mainLabel.textAlignment = .center
-        cell.mainLabel.font = .boldSystemFont(ofSize: 14)
-        
-        cell.subLabel.text = data.city_explain
-        cell.subLabel.font = .systemFont(ofSize: 10)
-        cell.subLabel.textColor = .gray
-        cell.subLabel.textAlignment = .center
-        cell.subLabel.numberOfLines = 0
+        cell.configure(data: city[indexPath.item])
         
         return cell
     }

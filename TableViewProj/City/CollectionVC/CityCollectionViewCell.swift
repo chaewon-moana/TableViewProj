@@ -32,4 +32,11 @@ class CityCollectionViewCell: UICollectionViewCell {
         
     }
 
+    func configure(data: City) {
+        let url = URL(string: data.city_image)
+        cityImageView.kf.setImage(with: url)
+        mainLabel.text = "\(data.city_name) | \(data.city_english_name)"
+        subLabel.text = data.city_explain
+        
+    }
 }

@@ -7,14 +7,14 @@
 
 import UIKit
 
-class CityViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+class CityViewController: UIViewController {
 
     @IBOutlet var titleView: UIView!
     @IBOutlet var underLine: UIView!
     @IBOutlet var titleLabel: UILabel!
     
     @IBOutlet var domesticSegment: UISegmentedControl!
-    
     @IBOutlet var cityCollectionView: UICollectionView!
     
     let city = CityInfo().city
@@ -31,20 +31,8 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cityCollectionView.delegate = self
         
         setAttribute()
-        
-        let layout = UICollectionViewFlowLayout()
-        
-        let spacing: CGFloat = 20
-        let cellWidth = UIScreen.main.bounds.width - spacing * 4
-        let cellHeight = UIScreen.main.bounds.height - spacing * 3
-        
-        layout.itemSize = CGSize(width: cellWidth / 2, height: cellHeight / 3)
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 5
-        
-        cityCollectionView.collectionViewLayout = layout
-        
+        setCollectionLayout()
+       
         domesticSegment.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
     }
     
@@ -64,6 +52,21 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
+    func setCollectionLayout() {
+        let layout = UICollectionViewFlowLayout()
+        
+        let spacing: CGFloat = 20
+        let cellWidth = UIScreen.main.bounds.width - spacing * 4
+        let cellHeight = UIScreen.main.bounds.height - spacing * 3
+        
+        layout.itemSize = CGSize(width: cellWidth / 2, height: cellHeight / 3)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 5
+        
+        cityCollectionView.collectionViewLayout = layout
+    }
+    
     func setAttribute() {
         underLine.layer.borderWidth = 1
         underLine.layer.borderColor = UIColor.gray.cgColor
@@ -73,6 +76,13 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
         titleLabel.font = .boldSystemFont(ofSize: 14)
     }
 
+    
+}
+
+
+
+extension CityViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return list.count
     }
@@ -91,6 +101,8 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
        
         return cell
     }
-    
+}
 
+extension CityViewController: UICollectionViewDataSource {
+    
 }

@@ -36,23 +36,23 @@ class TravelTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell") as! TravelTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as! TravelTableViewCell
+      
         
         let data = magazine[indexPath.row]
         let url = URL(string: data.photo_image)
-                
+        
+        cell.configureCell(data: data)
+        
         cell.mainImageView.kf.setImage(with: url)
         cell.mainImageView.contentMode = .scaleAspectFit
-    
-        cell.mainTitle.text = data.title
+        
         cell.mainTitle.font = .boldSystemFont(ofSize: 20)
         cell.mainTitle.numberOfLines = 0
-        
-        cell.subTitle.text = data.subtitle
+    
         cell.subTitle.font = .systemFont(ofSize: 14)
-        cell.subTitle.textColor = .gray
-        
-        cell.date.text = setDate(date: data.date)
+       // cell.subTitle.textColor = .gray
+   
         cell.date.font = .systemFont(ofSize: 12)
         cell.date.textColor = .gray
         
@@ -61,23 +61,6 @@ class TravelTableViewController: UITableViewController {
 
     @objc func cellTapped(sender: UIButton) {
         print(sender.tag)
-    }
-    
-   
-    
-    func setDate(date: String) -> String {
-        let str = date
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyMMdd"
-        
-        let convertDate = dateFormatter.date(from: str)
-        
-        let result = DateFormatter()
-        result.dateFormat = "yy년 MM월 dd일"
-        let convert = result.string(from: convertDate!)
-        
-        return convert
     }
 
 }
