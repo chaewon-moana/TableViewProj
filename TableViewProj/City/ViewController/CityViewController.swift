@@ -31,7 +31,7 @@ class CityViewController: UIViewController {
         cityCollectionView.delegate = self
         
         setAttribute()
-        setCollectionLayout()
+        cityCollectionView.collectionViewLayout = setCollectionLayout(spacing: 20)
        
         domesticSegment.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
     }
@@ -52,21 +52,6 @@ class CityViewController: UIViewController {
         }
     }
     
-    func setCollectionLayout() {
-        let layout = UICollectionViewFlowLayout()
-        
-        let spacing: CGFloat = 20
-        let cellWidth = UIScreen.main.bounds.width - spacing * 4
-        let cellHeight = UIScreen.main.bounds.height - spacing * 3
-        
-        layout.itemSize = CGSize(width: cellWidth / 2, height: cellHeight / 3)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 5
-        
-        cityCollectionView.collectionViewLayout = layout
-    }
-    
     func setAttribute() {
         underLine.layer.borderWidth = 1
         underLine.layer.borderColor = UIColor.gray.cgColor
@@ -75,10 +60,7 @@ class CityViewController: UIViewController {
         titleLabel.textAlignment = .center
         titleLabel.font = .boldSystemFont(ofSize: 14)
     }
-
-    
 }
-
 
 
 extension CityViewController: UICollectionViewDelegate {

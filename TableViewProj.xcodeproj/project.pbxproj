@@ -25,6 +25,7 @@
 		DE4470862B4A5D6100334E01 /* Case2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4470852B4A5D6100334E01 /* Case2TableViewController.swift */; };
 		DE4470882B4A667400334E01 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4470872B4A667400334E01 /* TodoTableViewController.swift */; };
 		DE44708A2B4A6ED000334E01 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4470892B4A6ED000334E01 /* TodoTableViewCell.swift */; };
+		DEA74B6E2B4EB0DC0078AA55 /* CityViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA74B6D2B4EB0DC0078AA55 /* CityViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		DE4470852B4A5D6100334E01 /* Case2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2TableViewController.swift; sourceTree = "<group>"; };
 		DE4470872B4A667400334E01 /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		DE4470892B4A6ED000334E01 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		DEA74B6D2B4EB0DC0078AA55 /* CityViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		DE4470702B4A551800334E01 /* TableViewProj */ = {
 			isa = PBXGroup;
 			children = (
+				DEA74B6C2B4EB0C10078AA55 /* Extension */,
 				DE235ED52B4D330F00E4BD09 /* City */,
 				DE235ECF2B4D329C00E4BD09 /* Travel */,
 				DE235ECE2B4D328A00E4BD09 /* Todo */,
@@ -140,6 +143,14 @@
 				DE4470852B4A5D6100334E01 /* Case2TableViewController.swift */,
 			);
 			path = TableViewProj;
+			sourceTree = "<group>";
+		};
+		DEA74B6C2B4EB0C10078AA55 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DEA74B6D2B4EB0DC0078AA55 /* CityViewController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 				DE4470722B4A551800334E01 /* AppDelegate.swift in Sources */,
 				DE44708A2B4A6ED000334E01 /* TodoTableViewCell.swift in Sources */,
 				DE235EB52B4BECB500E4BD09 /* TravelTableViewController.swift in Sources */,
+				DEA74B6E2B4EB0DC0078AA55 /* CityViewController+Extension.swift in Sources */,
 				DE235ED92B4D339100E4BD09 /* CityCollectionViewController.swift in Sources */,
 				DE235EDC2B4D339E00E4BD09 /* CityCollectionViewCell.swift in Sources */,
 				DE235EB72B4BECC000E4BD09 /* TravelTableViewCell.swift in Sources */,
