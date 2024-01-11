@@ -10,9 +10,6 @@ import UIKit
 
 class CityViewController: UIViewController {
 
-    @IBOutlet var titleView: UIView!
-    @IBOutlet var underLine: UIView!
-    @IBOutlet var titleLabel: UILabel!
     
     @IBOutlet var domesticSegment: UISegmentedControl!
     @IBOutlet var cityCollectionView: UICollectionView!
@@ -24,13 +21,13 @@ class CityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "인기 도시"
         let xib = UINib(nibName: "CityCollectionViewCell", bundle: nil)
         cityCollectionView.register(xib, forCellWithReuseIdentifier: "CityCollectionViewCell")
         
         cityCollectionView.dataSource = self
         cityCollectionView.delegate = self
         
-        setAttribute()
         cityCollectionView.collectionViewLayout = setCollectionLayout(spacing: 20)
        
         domesticSegment.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
@@ -50,20 +47,14 @@ class CityViewController: UIViewController {
         default:
             print("오류")
         }
+        cityCollectionView.reloadData()
+
     }
     
-    func setAttribute() {
-        underLine.layer.borderWidth = 1
-        underLine.layer.borderColor = UIColor.gray.cgColor
-        
-        titleLabel.text = "인기도시"
-        titleLabel.textAlignment = .center
-        titleLabel.font = .boldSystemFont(ofSize: 14)
-    }
 }
 
 
-extension CityViewController: UICollectionViewDelegate {
+extension CityViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return list.count
@@ -78,13 +69,21 @@ extension CityViewController: UICollectionViewDelegate {
         cell.cityImageView.kf.setImage(with: url)
         cell.mainLabel.text = "\(data.city_name) | \(data.city_english_name)"
         cell.subLabel.text = data.city_explain
-        
-        collectionView.reloadData()
+        //print(#function)
        
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: "Detail", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        //let nav = UINavigationController(rootViewController: vc)
+        //nav.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(vc, animated: true)
+        //present(nav, animated: true)
+        
+    }
 }
 
-extension CityViewController: UICollectionViewDataSource {
-    
-}
+

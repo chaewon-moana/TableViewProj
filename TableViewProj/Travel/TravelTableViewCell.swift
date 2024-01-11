@@ -9,7 +9,7 @@ import UIKit
 
 class TravelTableViewCell: UITableViewCell {
 
-    @IBOutlet var backView: UIView!
+   // @IBOutlet var backView: UIView!
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var mainTitle: UILabel!
     @IBOutlet var subTitle: UILabel!
@@ -17,19 +17,22 @@ class TravelTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+       // mainImageView.contentMode = .scaleAspectFit
+//        if let image = mainImageView {
+//            image.contentMode = .scaleAspectFit
+//        } else {
+//            print("mainImageView 에러")
+//        }
         
-        if let image = mainImageView {
-            image.contentMode = .scaleAspectFit
-        } else {
-            print("mainImageView 에러")
-        }
+        mainTitle.font = .boldSystemFont(ofSize: 20)
+        mainTitle.numberOfLines = 0
         
-        if let label = mainTitle {
-            label.font = .boldSystemFont(ofSize: 20)
-            label.numberOfLines = 0
-        } else {
-            print("mainTitle 에러")
-        }
+//        if let label = mainTitle {
+//            label.font = .boldSystemFont(ofSize: 20)
+//            label.numberOfLines = 0
+//        } else {
+//            print("mainTitle 에러")
+//        }
         
         if let label = subTitle {
             label.textColor = .gray
@@ -37,15 +40,15 @@ class TravelTableViewCell: UITableViewCell {
         } else {
             print("subTitle 에러")
         }
-        
-
-        if let date = date {
-            date.font = .systemFont(ofSize: 12)
-            date.textColor = .gray
-        } else {
-            print("date 에러")
-        }
-        
+////        
+//
+//        if let date = date {
+//            date.font = .systemFont(ofSize: 12)
+//            date.textColor = .gray
+//        } else {
+//            print("date 에러")
+//        }
+//        
         
 //        mainImageView.contentMode = .scaleAspectFit
 //        
@@ -54,7 +57,7 @@ class TravelTableViewCell: UITableViewCell {
 //    
 //        subTitle.font = .systemFont(ofSize: 14)
 //        subTitle.textColor = .gray
-//   
+//
 //        date.font = .systemFont(ofSize: 12)
 //        date.textColor = .gray
         

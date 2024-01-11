@@ -3,4 +3,99 @@
    uuid = "D8D48F6D-3A09-4B2F-B4AF-507C03DCF42D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B653E6F-D39A-4A00-9D0F-05E88B5F4CDC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TableViewProj/Travel/TravelTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2B653E6F-D39A-4A00-9D0F-05E88B5F4CDC - bbb5fe0700c2570"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewProj.TravelTableViewCell.awakeFromNib() -&gt; ()"
+                  moduleName = "TableViewProj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chaewon/Desktop/TableViewProj/TableViewProj/Travel/TravelTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "2B653E6F-D39A-4A00-9D0F-05E88B5F4CDC - bbb5fe0700c2058"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewProj.TravelTableViewCell.awakeFromNib() -&gt; ()"
+                  moduleName = "TableViewProj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chaewon/Desktop/TableViewProj/TableViewProj/Travel/TravelTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "2B653E6F-D39A-4A00-9D0F-05E88B5F4CDC - bbb5fe0700c2039"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewProj.TravelTableViewCell.awakeFromNib() -&gt; ()"
+                  moduleName = "TableViewProj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chaewon/Desktop/TableViewProj/TableViewProj/Travel/TravelTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "2B653E6F-D39A-4A00-9D0F-05E88B5F4CDC - bbb5fe0700c2039"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewProj.TravelTableViewCell.awakeFromNib() -&gt; ()"
+                  moduleName = "TableViewProj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chaewon/Desktop/TableViewProj/TableViewProj/Travel/TravelTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "2B653E6F-D39A-4A00-9D0F-05E88B5F4CDC - bbb5fe0700c2112"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewProj.TravelTableViewCell.awakeFromNib() -&gt; ()"
+                  moduleName = "TableViewProj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chaewon/Desktop/TableViewProj/TableViewProj/Travel/TravelTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

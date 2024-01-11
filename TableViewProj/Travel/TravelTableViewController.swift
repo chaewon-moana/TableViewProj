@@ -45,14 +45,14 @@ class TravelTableViewController: UITableViewController {
         
         cell.mainImageView.kf.setImage(with: url)
         
-        //cell.mainImageView.contentMode = .scaleAspectFit
-        
+//        cell.mainImageView.contentMode = .scaleAspectFit
+//        
 //        cell.mainTitle.font = .boldSystemFont(ofSize: 20)
 //        cell.mainTitle.numberOfLines = 0
-        
-        //cell.subTitle.font = .systemFont(ofSize: 14)
-       // cell.subTitle.textColor = .gray
-        
+//        
+//        cell.subTitle.font = .systemFont(ofSize: 14)
+//        cell.subTitle.textColor = .gray
+//        
 //        cell.date.font = .systemFont(ofSize: 12)
 //        cell.date.textColor = .gray
         
