@@ -38,6 +38,8 @@ class DetailViewController: UIViewController, ConnectTableViewCell {
         let backButton = UIBarButtonItem(image: back, style: .plain, target: self, action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem = backButton
         
+        let right = UIBarButtonItem(image: UIImage(systemName: "heart.circle.fill"), style: .plain, target: self, action: #selector(filterHeartMark))
+        navigationItem.rightBarButtonItem = right
     }
     
     @objc func filterHeartMark() {
@@ -58,28 +60,33 @@ class DetailViewController: UIViewController, ConnectTableViewCell {
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return travel.count
+        let list = filteredHeart ? travel.filter({ $0.like ?? false }) : travel
+
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = travel[indexPath.row]
-        //ADTableViewCell
+        let list = filteredHeart ? travel.filter({ $0.like ?? false }) : travel
+        let data = list[indexPath.row]
  
-            if data.ad {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "ADTableViewCell", for: indexPath) as! ADTableViewCell
-                cell.configureCell(data: data)
-                return cell
-            } else { //DetailTableViewCell
-                let cell = tableView.dequeueReusableCell(withIdentifier: "DetailTableViewCell", for: indexPath) as! DetailTableViewCell
-                cell.configureCell(data: data)
-                return cell
-            }
+        if data.ad {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ADTableViewCell", for: indexPath) as! ADTableViewCell
+            cell.configureCell(data: data)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailTableViewCell", for: indexPath) as! DetailTableViewCell
+            cell.configureCell(data: data)
+            return cell
+        }
         
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if travel[indexPath.row].ad {
+        let list = filteredHeart ? travel.filter({ $0.like ?? false }) : travel
+        let data = list[indexPath.row]
+        
+        if data.ad {
             return Travel.ADHeight
         } else {
             return Travel.cellHeight
