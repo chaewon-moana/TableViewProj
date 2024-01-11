@@ -8,8 +8,9 @@
 import UIKit
 
 
-class CityViewController: UIViewController {
+class CityViewController: UIViewController, ConnectTableViewCell {
 
+    
     
     @IBOutlet var domesticSegment: UISegmentedControl!
     @IBOutlet var cityCollectionView: UICollectionView!
@@ -22,14 +23,12 @@ class CityViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "인기 도시"
-        let xib = UINib(nibName: "CityCollectionViewCell", bundle: nil)
-        cityCollectionView.register(xib, forCellWithReuseIdentifier: "CityCollectionViewCell")
-        
+
         cityCollectionView.dataSource = self
         cityCollectionView.delegate = self
         
         cityCollectionView.collectionViewLayout = setCollectionLayout(spacing: 20)
-       
+        setXIB()
         domesticSegment.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
     }
     
@@ -48,11 +47,13 @@ class CityViewController: UIViewController {
             print("오류")
         }
         cityCollectionView.reloadData()
-
     }
     
+    func setXIB() {
+        let xib = UINib(nibName: "CityCollectionViewCell", bundle: nil)
+        cityCollectionView.register(xib, forCellWithReuseIdentifier: "CityCollectionViewCell")
+    }
 }
-
 
 extension CityViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
@@ -69,8 +70,7 @@ extension CityViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.cityImageView.kf.setImage(with: url)
         cell.mainLabel.text = "\(data.city_name) | \(data.city_english_name)"
         cell.subLabel.text = data.city_explain
-        //print(#function)
-       
+   
         return cell
     }
     
@@ -78,10 +78,8 @@ extension CityViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let sb = UIStoryboard(name: "Detail", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        //let nav = UINavigationController(rootViewController: vc)
-        //nav.modalPresentationStyle = .fullScreen
+
         navigationController?.pushViewController(vc, animated: true)
-        //present(nav, animated: true)
         
     }
 }

@@ -8,6 +8,8 @@
 import UIKit
 
 class SpotViewController: UIViewController {
+    
+    static let identifier: String = "SpotViewController"
 
     @IBOutlet var mainTitle: UILabel!
     override func viewDidLoad() {
@@ -20,6 +22,7 @@ class SpotViewController: UIViewController {
         
         let image = UIImage(systemName: "chevron.backward")
         let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(backButtonTapped))
+        navigationItem.leftBarButtonItem = button
     }
     
     

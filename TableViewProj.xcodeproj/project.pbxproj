@@ -34,6 +34,7 @@
 		DE514E9C2B4FD6590001589B /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE514E9B2B4FD6590001589B /* TravelModel.swift */; };
 		DE514E9E2B4FF7AE0001589B /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE514E9D2B4FF7AE0001589B /* SpotViewController.swift */; };
 		DE514EA02B4FF7C30001589B /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE514E9F2B4FF7C30001589B /* ADViewController.swift */; };
+		DE514EA32B50050F0001589B /* ConnectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE514EA22B50050F0001589B /* ConnectProtocol.swift */; };
 		DEA74B6E2B4EB0DC0078AA55 /* CityViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA74B6D2B4EB0DC0078AA55 /* CityViewController+Extension.swift */; };
 		DEA74B702B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA74B6F2B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		DE514E9B2B4FD6590001589B /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TravelModel.swift; path = "../../../../Documents/새싹 강의자료/TravelModel.swift"; sourceTree = "<group>"; };
 		DE514E9D2B4FF7AE0001589B /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
 		DE514E9F2B4FF7C30001589B /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		DE514EA22B50050F0001589B /* ConnectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectProtocol.swift; sourceTree = "<group>"; };
 		DEA74B6D2B4EB0DC0078AA55 /* CityViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityViewController+Extension.swift"; sourceTree = "<group>"; };
 		DEA74B6F2B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityCollectionViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 		DE4470702B4A551800334E01 /* TableViewProj */ = {
 			isa = PBXGroup;
 			children = (
+				DE514EA12B5004FA0001589B /* Protocol */,
 				DEA74B6C2B4EB0C10078AA55 /* Extension */,
 				DE235ED52B4D330F00E4BD09 /* City */,
 				DE235ECF2B4D329C00E4BD09 /* Travel */,
@@ -180,6 +183,14 @@
 				DE514E982B4FD1800001589B /* ADTableViewCell.xib */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		DE514EA12B5004FA0001589B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DE514EA22B50050F0001589B /* ConnectProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		DEA74B6C2B4EB0C10078AA55 /* Extension */ = {
@@ -287,6 +298,7 @@
 				DE514E992B4FD1800001589B /* ADTableViewCell.swift in Sources */,
 				DEA74B6E2B4EB0DC0078AA55 /* CityViewController+Extension.swift in Sources */,
 				DE235ED92B4D339100E4BD09 /* CityCollectionViewController.swift in Sources */,
+				DE514EA32B50050F0001589B /* ConnectProtocol.swift in Sources */,
 				DE235EDC2B4D339E00E4BD09 /* CityCollectionViewCell.swift in Sources */,
 				DE235EB72B4BECC000E4BD09 /* TravelTableViewCell.swift in Sources */,
 				DE4470862B4A5D6100334E01 /* Case2TableViewController.swift in Sources */,
