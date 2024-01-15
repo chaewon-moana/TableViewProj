@@ -10,13 +10,13 @@ import Kingfisher
 
 class CityCollectionViewController: UICollectionViewController {
     
-    let city = CityInfo().city
+    let city = CityInfo.city
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let xib = UINib(nibName: "CityCollectionViewCell", bundle: nil)
-        collectionView.register(xib, forCellWithReuseIdentifier: "CityCollectionViewCell")
+        let xib = UINib(nibName: CityCollectionViewCell.identifier, bundle: nil)
+        collectionView.register(xib, forCellWithReuseIdentifier: CityCollectionViewCell.identifier)
         
         collectionView.collectionViewLayout = setCollectionLayout(spacing: 20)
     }
@@ -27,7 +27,7 @@ class CityCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityCollectionViewCell", for: indexPath) as! CityCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CityCollectionViewCell.identifier, for: indexPath) as! CityCollectionViewCell
         cell.configure(data: city[indexPath.item])
         return cell
     }

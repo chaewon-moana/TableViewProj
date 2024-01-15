@@ -11,23 +11,15 @@ import WebKit
 
 class TravelTableViewController: UITableViewController {
     
-    @IBOutlet var topBackView: UIView!
-    @IBOutlet var underline: UIView!
-    @IBOutlet var topTItle: UILabel!
-    
     let magazine = MagazineInfo.magazine
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        underline.layer.borderWidth = 1
-        underline.layer.borderColor = UIColor.lightGray.cgColor
-        tableView.separatorStyle = .none
+        navigationItem.title = "TRAVEL MAGAZINE"
+    
+//        tableView.separatorStyle = .none
 
-        topBackView.backgroundColor = .white
-        topTItle.text = "Travel Magazine"
-        topTItle.textAlignment = .center
-        topTItle.font = .boldSystemFont(ofSize: 20)
         tableView.rowHeight = 400
     }
 
@@ -64,8 +56,7 @@ class TravelTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: WebViewController.identifier) as! WebViewController
         vc.url = magazine[indexPath.row].link
-        present(vc, animated: true)
-
+        navigationController?.pushViewController(vc, animated: true)
         
     }
     

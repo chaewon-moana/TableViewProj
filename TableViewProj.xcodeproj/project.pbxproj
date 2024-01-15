@@ -38,6 +38,7 @@
 		DE99C2102B54F82000158E02 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C20F2B54F82000158E02 /* WebViewController.swift */; };
 		DE99C2122B54F8FD00158E02 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C2112B54F8FD00158E02 /* UIViewController+Extension.swift */; };
 		DE99C2142B54F93900158E02 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C2132B54F93900158E02 /* UITableViewCell+Extension.swift */; };
+		DE99C2162B54FC8800158E02 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C2152B54FC8800158E02 /* UICollectionViewCell+Extension.swift */; };
 		DEA74B6E2B4EB0DC0078AA55 /* CityViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA74B6D2B4EB0DC0078AA55 /* CityViewController+Extension.swift */; };
 		DEA74B702B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA74B6F2B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		DE99C20F2B54F82000158E02 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DE99C2112B54F8FD00158E02 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DE99C2132B54F93900158E02 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		DE99C2152B54FC8800158E02 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		DEA74B6D2B4EB0DC0078AA55 /* CityViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityViewController+Extension.swift"; sourceTree = "<group>"; };
 		DEA74B6F2B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityCollectionViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +209,7 @@
 				DEA74B6F2B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift */,
 				DE99C2112B54F8FD00158E02 /* UIViewController+Extension.swift */,
 				DE99C2132B54F93900158E02 /* UITableViewCell+Extension.swift */,
+				DE99C2152B54FC8800158E02 /* UICollectionViewCell+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				DE44708A2B4A6ED000334E01 /* TodoTableViewCell.swift in Sources */,
 				DE514E8F2B4FCD6A0001589B /* DetailViewController.swift in Sources */,
 				DE235EB52B4BECB500E4BD09 /* TravelTableViewController.swift in Sources */,
+				DE99C2162B54FC8800158E02 /* UICollectionViewCell+Extension.swift in Sources */,
 				DE514E992B4FD1800001589B /* ADTableViewCell.swift in Sources */,
 				DEA74B6E2B4EB0DC0078AA55 /* CityViewController+Extension.swift in Sources */,
 				DE99C2102B54F82000158E02 /* WebViewController.swift in Sources */,
