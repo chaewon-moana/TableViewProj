@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Zl-Od-fSp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Brh-3V-F8A">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -325,6 +325,40 @@
             </objects>
             <point key="canvasLocation" x="956" y="694"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="aIc-fu-p8G">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="10y-rk-7Cp" customClass="WebViewController" customModule="TableViewProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l15-iY-hiW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25q-pg-5TD">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Eb9-cZ-di8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="25q-pg-5TD" firstAttribute="leading" secondItem="Eb9-cZ-di8" secondAttribute="leading" id="BTD-QA-UQ1"/>
+                            <constraint firstItem="Eb9-cZ-di8" firstAttribute="bottom" secondItem="25q-pg-5TD" secondAttribute="bottom" id="O6C-XU-29h"/>
+                            <constraint firstItem="Eb9-cZ-di8" firstAttribute="trailing" secondItem="25q-pg-5TD" secondAttribute="trailing" id="dnt-8b-0ul"/>
+                            <constraint firstItem="25q-pg-5TD" firstAttribute="top" secondItem="Eb9-cZ-di8" secondAttribute="top" id="veB-Tw-0z0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="25q-pg-5TD" id="3Dk-rf-8D0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flu-tm-Oij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648" y="694"/>
+        </scene>
         <!--City Collection View Controller-->
         <scene sceneID="vI0-kM-aQf">
             <objects>
@@ -636,7 +670,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

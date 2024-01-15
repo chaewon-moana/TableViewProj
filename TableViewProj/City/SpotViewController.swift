@@ -9,7 +9,7 @@ import UIKit
 
 class SpotViewController: UIViewController {
     
-    static let identifier: String = "SpotViewController"
+    //static let identifier: String = "SpotViewController"
 
     @IBOutlet var mainTitle: UILabel!
     override func viewDidLoad() {

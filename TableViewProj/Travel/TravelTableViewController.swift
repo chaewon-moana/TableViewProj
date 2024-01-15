@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import WebKit
 
 class TravelTableViewController: UITableViewController {
     
@@ -14,7 +15,7 @@ class TravelTableViewController: UITableViewController {
     @IBOutlet var underline: UIView!
     @IBOutlet var topTItle: UILabel!
     
-    let magazine = MagazineInfo().magazine
+    let magazine = MagazineInfo.magazine
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class TravelTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as! TravelTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.identifier, for: indexPath) as! TravelTableViewCell
         
         let data = magazine[indexPath.row]
         let url = URL(string: data.photo_image)
@@ -45,23 +46,28 @@ class TravelTableViewController: UITableViewController {
         
         cell.mainImageView.kf.setImage(with: url)
         
-//        cell.mainImageView.contentMode = .scaleAspectFit
-//        
-//        cell.mainTitle.font = .boldSystemFont(ofSize: 20)
-//        cell.mainTitle.numberOfLines = 0
-//        
-//        cell.subTitle.font = .systemFont(ofSize: 14)
-//        cell.subTitle.textColor = .gray
-//        
-//        cell.date.font = .systemFont(ofSize: 12)
-//        cell.date.textColor = .gray
+        cell.mainImageView.contentMode = .scaleAspectFit
+        
+        cell.mainTitle.font = .boldSystemFont(ofSize: 20)
+        cell.mainTitle.numberOfLines = 0
+        
+        cell.subTitle.font = .systemFont(ofSize: 14)
+        cell.subTitle.textColor = .gray
+        
+        cell.date.font = .systemFont(ofSize: 12)
+        cell.date.textColor = .gray
         
         return cell
     }
 
-    @objc func cellTapped(sender: UIButton) {
-        print(sender.tag)
-    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: WebViewController.identifier) as! WebViewController
+        vc.url = magazine[indexPath.row].link
+        present(vc, animated: true)
 
+        
+    }
+    
 }
 

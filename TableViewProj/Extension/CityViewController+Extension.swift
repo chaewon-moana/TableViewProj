@@ -9,6 +9,7 @@ import UIKit
 
 extension CityViewController {
     
+
     func setCollectionLayout(spacing: CGFloat) -> UICollectionViewFlowLayout {
         
         let layout = UICollectionViewFlowLayout()

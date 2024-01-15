@@ -9,7 +9,7 @@ import UIKit
 
 class ADViewController: UIViewController {
     
-    static let identifier: String = "ADViewController"
+    //static let identifier: String = "ADViewController"
 
     @IBOutlet var mainTitle: UILabel!
     override func viewDidLoad() {
