@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Zl-Od-fSp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wm7-m4-8tf">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -619,6 +620,44 @@
             </objects>
             <point key="canvasLocation" x="7448.0916030534345" y="650.70422535211276"/>
         </scene>
+        <!--Cinema View Controller-->
+        <scene sceneID="2lt-la-cIh">
+            <objects>
+                <viewController id="1sc-xs-wD3" customClass="CinemaViewController" customModule="TableViewProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wBM-rK-6eP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHq-V9-ibX">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ene-B9-mgx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gHq-V9-ibX" firstAttribute="leading" secondItem="ene-B9-mgx" secondAttribute="leading" id="BLz-XS-bjd"/>
+                            <constraint firstItem="ene-B9-mgx" firstAttribute="trailing" secondItem="gHq-V9-ibX" secondAttribute="trailing" id="VCb-tM-OTc"/>
+                            <constraint firstItem="gHq-V9-ibX" firstAttribute="top" secondItem="ene-B9-mgx" secondAttribute="top" id="bFf-FF-Ifg"/>
+                            <constraint firstItem="ene-B9-mgx" firstAttribute="bottom" secondItem="gHq-V9-ibX" secondAttribute="bottom" id="rhd-FR-RQU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iJB-B2-Jbz">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="lGP-kv-51l">
+                            <connections>
+                                <action selector="rightButtonTapped:" destination="1sc-xs-wD3" id="pQy-6R-XPa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="gHq-V9-ibX" id="UJh-uW-uYd"/>
+                        <outlet property="rightBarButton" destination="lGP-kv-51l" id="cMt-88-gZZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ouu-2s-ZHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8092.3664122137397" y="1308.4507042253522"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="x8I-1y-b8n">
             <objects>
@@ -654,6 +693,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTJ-hO-oAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="954.96183206106866" y="693.66197183098598"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2kM-6o-lrt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wm7-m4-8tf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rpj-Np-fDZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1sc-xs-wD3" kind="relationship" relationship="rootViewController" id="eZU-Yk-KLh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TvZ-fn-LDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7165.6488549618316" y="1308.4507042253522"/>
         </scene>
     </scenes>
     <resources>

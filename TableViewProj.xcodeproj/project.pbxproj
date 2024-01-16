@@ -39,6 +39,8 @@
 		DE99C2122B54F8FD00158E02 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C2112B54F8FD00158E02 /* UIViewController+Extension.swift */; };
 		DE99C2142B54F93900158E02 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C2132B54F93900158E02 /* UITableViewCell+Extension.swift */; };
 		DE99C2162B54FC8800158E02 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C2152B54FC8800158E02 /* UICollectionViewCell+Extension.swift */; };
+		DE99C2182B5509AD00158E02 /* CinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C2172B5509AD00158E02 /* CinemaViewController.swift */; };
+		DE99C21A2B55FF5600158E02 /* TheaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C2192B55FF5500158E02 /* TheaterData.swift */; };
 		DEA74B6E2B4EB0DC0078AA55 /* CityViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA74B6D2B4EB0DC0078AA55 /* CityViewController+Extension.swift */; };
 		DEA74B702B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA74B6F2B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,8 @@
 		DE99C2112B54F8FD00158E02 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DE99C2132B54F93900158E02 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		DE99C2152B54FC8800158E02 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		DE99C2172B5509AD00158E02 /* CinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaViewController.swift; sourceTree = "<group>"; };
+		DE99C2192B55FF5500158E02 /* TheaterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheaterData.swift; path = "../../../Documents/새싹 강의자료/TheaterData.swift"; sourceTree = "<group>"; };
 		DEA74B6D2B4EB0DC0078AA55 /* CityViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityViewController+Extension.swift"; sourceTree = "<group>"; };
 		DEA74B6F2B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityCollectionViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +181,8 @@
 				DE44707C2B4A551900334E01 /* LaunchScreen.storyboard */,
 				DE44707F2B4A551900334E01 /* Info.plist */,
 				DE4470852B4A5D6100334E01 /* Case2TableViewController.swift */,
+				DE99C2172B5509AD00158E02 /* CinemaViewController.swift */,
+				DE99C2192B55FF5500158E02 /* TheaterData.swift */,
 			);
 			path = TableViewProj;
 			sourceTree = "<group>";
@@ -306,12 +312,14 @@
 				DEA74B702B4EB80B0078AA55 /* CityCollectionViewController+Extension.swift in Sources */,
 				DE4470722B4A551800334E01 /* AppDelegate.swift in Sources */,
 				DE514E9E2B4FF7AE0001589B /* SpotViewController.swift in Sources */,
+				DE99C21A2B55FF5600158E02 /* TheaterData.swift in Sources */,
 				DE44708A2B4A6ED000334E01 /* TodoTableViewCell.swift in Sources */,
 				DE514E8F2B4FCD6A0001589B /* DetailViewController.swift in Sources */,
 				DE235EB52B4BECB500E4BD09 /* TravelTableViewController.swift in Sources */,
 				DE99C2162B54FC8800158E02 /* UICollectionViewCell+Extension.swift in Sources */,
 				DE514E992B4FD1800001589B /* ADTableViewCell.swift in Sources */,
 				DEA74B6E2B4EB0DC0078AA55 /* CityViewController+Extension.swift in Sources */,
+				DE99C2182B5509AD00158E02 /* CinemaViewController.swift in Sources */,
 				DE99C2102B54F82000158E02 /* WebViewController.swift in Sources */,
 				DE235ED92B4D339100E4BD09 /* CityCollectionViewController.swift in Sources */,
 				DE514EA32B50050F0001589B /* ConnectProtocol.swift in Sources */,

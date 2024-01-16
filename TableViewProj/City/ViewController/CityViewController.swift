@@ -53,7 +53,6 @@ class CityViewController: UIViewController, ConnectTableViewCell {
         default:
             print("오류")
         }
-        //cityCollectionView.reloadData()
     }
     
     func setXIB() {
@@ -87,7 +86,6 @@ extension CityViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as! DetailViewController
 
         navigationController?.pushViewController(vc, animated: true)
-        
     }
 }
 
