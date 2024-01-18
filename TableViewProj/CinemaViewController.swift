@@ -13,10 +13,13 @@ class CinemaViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var rightBarButton: UIBarButtonItem!
     
+    let list = TheaterList.mapAnnotations
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.rightBarButtonItem?.title = "Filter"
+        setAnnotation()
     
     }
     
@@ -44,12 +47,20 @@ class CinemaViewController: UIViewController {
     @IBAction func rightButtonTapped(_ sender: UIBarButtonItem) {
         setAlert()
     }
-    
-    
+        
     func setAnnotation() {
-//        let mega = MKPointAnnotation()
-//        annotation.coordinate = coordinate
-//        annotation.title = "여기얌여기"
-//        mapView.addAnnotation(annotation)
+        
+        let coordinate = CLLocationCoordinate2D(latitude: 37.506831, longitude: 126.960819) //중앙대학교 병원 기준
+        
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 15000, longitudinalMeters: 15000)
+        mapView.setRegion(region, animated: true)
+        
+        for item in list {
+            let cinema = MKPointAnnotation()
+            cinema.coordinate.latitude = item.latitude
+            cinema.coordinate.longitude = item.longitude
+            cinema.title = item.location
+            mapView.addAnnotation(cinema)
+        }
     }
 }

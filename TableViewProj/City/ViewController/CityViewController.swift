@@ -7,6 +7,22 @@
 
 import UIKit
 
+enum SegmentValue: Int, CaseIterable {
+    case all
+    case domestic
+    case aboard
+    
+    var list: [City] {
+        switch self {
+        case.all:
+            return CityInfo.city
+        case .domestic:
+            return CityInfo.city.filter( {$0.domestic_travel})
+        case .aboard:
+            return CityInfo.city.filter( {!$0.domestic_travel} )
+        }
+    }
+}
 
 class CityViewController: UIViewController, ConnectTableViewCell {
 
@@ -16,15 +32,23 @@ class CityViewController: UIViewController, ConnectTableViewCell {
     
     let originalCity = CityInfo.city
     var selectSegment: Int = 0
+    
     var list: [City] = CityInfo.city {
         didSet {
             cityCollectionView.reloadData()
         }
     }
 
+   // var list: [City] = CityInfo.city
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(SegmentValue.all.self)
+        print(SegmentValue.all.rawValue)
+        print(SegmentValue.allCases[0].list)
+
         navigationItem.title = "인기 도시"
 
         cityCollectionView.dataSource = self
@@ -41,18 +65,21 @@ class CityViewController: UIViewController, ConnectTableViewCell {
     
     @objc func valueChanged(sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
-        selectSegment = sender.selectedSegmentIndex
-
-        switch selectSegment {
-        case 0:
-            list = originalCity
-        case 1:
-            list = originalCity.filter( {$0.domestic_travel})
-        case 2:
-            list = originalCity.filter( {!$0.domestic_travel})
-        default:
-            print("오류")
-        }
+        
+        let selectSegment = sender.selectedSegmentIndex
+        list = SegmentValue.allCases[selectSegment].list
+        
+       
+//        switch selectSegment {
+//        case 0:
+//            list = originalCity
+//        case 1:
+//            list = originalCity.filter( {$0.domestic_travel})
+//        case 2:
+//            list = originalCity.filter( {!$0.domestic_travel})
+//        default:
+//            print("오류")
+//        }
     }
     
     func setXIB() {
@@ -98,7 +125,7 @@ extension CityViewController: UISearchBarDelegate {
         
         var filterData: [City] = []
         
-        var string = searchBar.text!.trimmingCharacters(in: .whitespaces).lowercased()
+        let string = searchBar.text!.trimmingCharacters(in: .whitespaces).lowercased()
         print(string,11)
                 
         for item in originalCity {
@@ -107,21 +134,23 @@ extension CityViewController: UISearchBarDelegate {
             }
         }
         
-        if string == "" {
+        if string.isEmpty {
             list = originalCity
             print(1)
         }
         
-        switch selectSegment {
-        case 0:
-            list = filterData.isEmpty ? originalCity : filterData
-        case 1:
-            list = filterData.isEmpty ? originalCity.filter( {$0.domestic_travel} ) : filterData.filter( {$0.domestic_travel} )
-        case 2:
-            list = filterData.isEmpty ? originalCity.filter( {!$0.domestic_travel} ) : filterData.filter( {!$0.domestic_travel} )
-        default:
-            print("오류!")
-        }
+        list = SegmentValue.allCases[selectSegment].list
+        
+//        switch selectSegment {
+//        case 0:
+//            list = filterData.isEmpty ? originalCity : filterData
+//        case 1:
+//            list = filterData.isEmpty ? originalCity.filter( {$0.domestic_travel} ) : filterData.filter( {$0.domestic_travel} )
+//        case 2:
+//            list = filterData.isEmpty ? originalCity.filter( {!$0.domestic_travel} ) : filterData.filter( {!$0.domestic_travel} )
+//        default:
+//            print("오류!")
+//        }
 
         
         print(searchText)
