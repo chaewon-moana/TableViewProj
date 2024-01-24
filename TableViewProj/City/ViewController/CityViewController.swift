@@ -38,9 +38,6 @@ class CityViewController: UIViewController, ConnectTableViewCell {
             cityCollectionView.reloadData()
         }
     }
-
-   // var list: [City] = CityInfo.city
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,21 +62,8 @@ class CityViewController: UIViewController, ConnectTableViewCell {
     
     @objc func valueChanged(sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
-        
-        let selectSegment = sender.selectedSegmentIndex
-        list = SegmentValue.allCases[selectSegment].list
-        
-       
-//        switch selectSegment {
-//        case 0:
-//            list = originalCity
-//        case 1:
-//            list = originalCity.filter( {$0.domestic_travel})
-//        case 2:
-//            list = originalCity.filter( {!$0.domestic_travel})
-//        default:
-//            print("오류")
-//        }
+        selectSegment = sender.selectedSegmentIndex
+        list = SegmentValue.allCases[sender.selectedSegmentIndex].list
     }
     
     func setXIB() {
@@ -138,21 +122,8 @@ extension CityViewController: UISearchBarDelegate {
             list = originalCity
             print(1)
         }
-        
-        list = SegmentValue.allCases[selectSegment].list
-        
-//        switch selectSegment {
-//        case 0:
-//            list = filterData.isEmpty ? originalCity : filterData
-//        case 1:
-//            list = filterData.isEmpty ? originalCity.filter( {$0.domestic_travel} ) : filterData.filter( {$0.domestic_travel} )
-//        case 2:
-//            list = filterData.isEmpty ? originalCity.filter( {!$0.domestic_travel} ) : filterData.filter( {!$0.domestic_travel} )
-//        default:
-//            print("오류!")
-//        }
 
-        
+        list = SegmentValue.allCases[selectSegment].list
         print(searchText)
     }
 }
